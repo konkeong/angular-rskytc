@@ -1,15 +1,20 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { ShippingFeeService } from './shipping-fee.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  items = [];
+  private items = [];
+  private itemCountSource = new BehaviorSubject<number>(0);
+  public itemCount$ = this.itemCountSource.asObservable();
 
-  constructor() { }
+  constructor(private shippingFeeService: ShippingFeeService) { }
 
   addToCart(product) {
     this.items.push(product);
+    this.itemCountSource.next(this.items.length);
   }
 
   getItems() {
@@ -18,6 +23,7 @@ export class CartService {
 
   clearCart() {
     this.items = [];
+    this.itemCountSource.next(0);
     return this.items;
   }
 }

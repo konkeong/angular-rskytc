@@ -2,25 +2,25 @@ export const products = [
   {
     id: 101,
     name: 'Phone XL',
-    price: 799,
+    price: 799 * 4,
     description: 'A large phone with one of the best screens.'
   },
   {
     id: 201,
     name: 'Phone Mini',
-    price: 699,
+    price: 699 * 4,
     description: 'A great phone with one of the best cameras.'
   },
   {
     id: 301,
     name: 'Phone Standard',
-    price: 299,
+    price: 299 * 4,
     description: ''
   },
   {
     id: 401,
     name: 'Newow Phone',
-    price: 599,
+    price: 599 * 4,
     description: 'A new and wow phone.'
   },
   {

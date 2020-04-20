@@ -2,7 +2,7 @@
   <h1>KK Store</h1>
 </a>
 
-<a class="button fancy-button" routerLink="/cart"><i class="material-icons">shopping_cart</i>Checkout</a>
+<a class="button fancy-button" routerLink="/cart"><i class="material-icons">shopping_cart</i>Checkout&nbsp;<span *ngIf="itemCount > 0">({{ itemCount }})</span></a>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.

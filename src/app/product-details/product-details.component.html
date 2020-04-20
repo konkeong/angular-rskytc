@@ -4,9 +4,9 @@
 <ng-template #hasProduct>
   <div>
     <h3>{{ product.name }}</h3>
-    <h4>{{ product.price | currency }}</h4>
+    <h4>{{ product.price | currency:'RM ' }}</h4>
     <p>{{ product.description }}</p>
-    <button (click)="addToCart(product)">Add to cart</button>
+    <button (click)="addToCart(product)">Add to Cart</button>
   </div>
 </ng-template>
 <ng-template #noProduct>
