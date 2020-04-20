@@ -1,6 +1,6 @@
 <h2>Products</h2>
 <div *ngFor="let product of products; index as productIdx">
-  <h3><a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">{{ product.name }} ($ {{ product.price }})</a></h3>
+  <h3><a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">{{ product.name }} ({{ product.price | currency }})</a></h3>
   <ng-container *ngIf="product.description; then hasDescription; else noDescription"></ng-container>
   <ng-template #hasDescription>
     <p>{{ product.description }}</p>
