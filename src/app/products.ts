@@ -27,7 +27,7 @@ export const products = [
     id: 501,
     name: 'Paper Phone',
     price: 0.99,
-    description: 'A mock phone made of pape.'
+    description: 'A mock phone made of paper.'
   }
 ];
 
