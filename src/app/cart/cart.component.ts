@@ -43,7 +43,7 @@ export class CartComponent implements OnInit {
     this.checkoutForm.reset();
 
     //console.warn('Your order (' + cnt + ' items) has been submitted', customerData);
-    this.message = "Your order (' + cnt + ' items) has been submitted.";
+    this.message = 'Your order (' + cnt + ' items) has been submitted.';
   }
 
 }

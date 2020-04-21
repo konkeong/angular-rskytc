@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from '../cart.service';
 import { ShippingFeeService } from '../shipping-fee.service';
 
 @Component({
@@ -9,11 +8,9 @@ import { ShippingFeeService } from '../shipping-fee.service';
 })
 export class ShippingComponent implements OnInit {
 
-  shippingCosts = [];
+  shippingCosts: any = [];
 
-  constructor(
-    private cartService: CartService,
-    private shippingFeeService: ShippingFeeService) { }
+  constructor(private shippingFeeService: ShippingFeeService) { }
 
   ngOnInit() {
     this.shippingCosts = this.shippingFeeService.getShippingPrices();
