@@ -8,6 +8,7 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
+
   products = products;
 
   constructor(private cartService: CartService) { }
@@ -23,6 +24,7 @@ export class ProductListComponent {
   buy(product) {
     this.cartService.addToCart(product);
   }
+
 }
 
 

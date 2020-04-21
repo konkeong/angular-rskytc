@@ -8,6 +8,7 @@ import { CartService } from '../cart.service';
   styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent implements OnInit, OnDestroy {
+
   private itemCountRef: Subscription = null;
   itemCount = 0;
 
@@ -26,6 +27,7 @@ export class TopBarComponent implements OnInit, OnDestroy {
   onCheckout() {
     window.alert('Checkout!');
   }
+
 }
 
 

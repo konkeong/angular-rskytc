@@ -8,6 +8,7 @@ import { ShippingFeeService } from '../shipping-fee.service';
   styleUrls: ['./shipping.component.css']
 })
 export class ShippingComponent implements OnInit {
+
   shippingCosts = [];
 
   constructor(

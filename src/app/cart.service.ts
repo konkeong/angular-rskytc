@@ -6,6 +6,7 @@ import { ShippingFeeService } from './shipping-fee.service';
   providedIn: 'root'
 })
 export class CartService {
+
   private items = [];
   private itemCountSource = new BehaviorSubject<number>(0);
   public itemCount$ = this.itemCountSource.asObservable();
@@ -26,4 +27,5 @@ export class CartService {
     this.itemCountSource.next(0);
     return this.items;
   }
+
 }

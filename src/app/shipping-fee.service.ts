@@ -11,4 +11,5 @@ export class ShippingFeeService {
   getShippingPrices() {
     return this.http.get('/assets/shipping.json');
   }
+
 }
